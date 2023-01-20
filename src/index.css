@@ -1,0 +1,566 @@
+/* body */
+html, body{
+  -webkit-app-region: drag;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  font-family: Noto Sans KR,sans-serif;
+  background-color: #1b1b1b;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* UID */
+.uid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-uid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pesquisa-uid {
+  padding-top: 25px;
+  width: 300px;
+  display: flex;
+}
+
+input[type="radio"] {
+  visibility: hidden;
+}
+
+.radio-uid, .menu{
+  padding: 20px 0px;
+  display: flex;
+}
+
+label .elementos, 
+label .item-menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+label .elementos:hover, 
+label .item-menu:hover{
+  opacity: 75%; 
+}
+
+label .conf-equipamentos{
+  width: 50px;
+  opacity: 50%;
+}
+
+input[type="radio"]:checked+label .elementos,
+input[type="radio"]:checked+label .item-menu{
+  opacity: 100%;
+}
+
+.response, 
+.response-critico, 
+.response-JSON, 
+.response-grafico,
+.response-calculadora {
+  display: none;
+}
+
+.response-JSON {
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0px;
+}
+
+/* menu */
+.menu{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*dados da conta*/
+section.conta-info {
+  padding: 0% 15%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.campo{
+  margin: 10px;
+}
+
+.conta1, .conta2{
+  display: flex;
+  flex-direction: column;
+}
+
+/*dados das armas*/
+section.linha{
+  border-top: 2px solid #fff;
+
+}
+
+div.linha{
+  margin-top: 20px;
+  
+  padding-left: 20%;
+  padding-right: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.weapon-lv-0, .weapon-lv-1, .weapon-lv-2{
+  position: relative;
+  top: 25px;
+}
+
+.weapon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weapon-star-0, .weapon-star-1, .weapon-star-2{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 35px;
+}
+
+.weapon-star-0 img, .weapon-star-1 img, .weapon-star-2 img{
+  width: 8%;
+}
+
+/*dados equipamentos*/
+.equips-full .status {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.status-full{
+  background-color: #161616;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.card-equipamento{
+  border: 2px solid #fff;
+  width: 46%;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.div-editar{
+  width: 100%;
+}
+
+.editar{
+  float: right;
+  width: 20px;
+  background-color: #fff;
+  border-bottom-left-radius: 15%;
+}
+
+.equips{
+  background-color: #1b1b1b;
+  padding: 1% 0%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  border-radius: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+}
+
+.equipamento, .equipamento2{
+  background-color: #00000030;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  width: 48%;
+  margin-bottom: 1rem;
+  margin-right: 0.4rem;
+}
+
+.equipamento2{
+  display: flex;
+  flex-direction: column;
+  margin-right: 0rem;
+  margin-left: 0.25rem;
+}
+
+.equipamento{
+  display: flex;
+  flex-direction: column;
+}
+
+.elmo, .ombreira, .bracadeira, .cinto, .peitoral, .calca, .luva, .bota{
+  display: flex;
+  align-items: center;
+}
+
+.ataque, .e-ataque, .img-atk, .img-atk-e, .crit{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.equip-img{
+  width: 40%;
+}
+
+.icon-ataque, .icon-e-ataque, .icon-total{
+  width: 1em;
+}
+
+.total{
+  border-top: 1px solid #fff;
+  padding-top: 5px;
+}
+
+.barra{
+  margin-top: 15px;
+}
+
+
+.status {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.barra-total{
+  background-color: #161616;
+}
+
+.barra {
+  height: 25px;
+  background-color: #161616;
+  width: 100%;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: linear-gradient(to right, #63c384 0%, #63c384 0%, #161616 0%);
+}
+
+.eficiencia{
+  background-color: #63c384;
+  height: 100%;
+  width: 0%;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.porcentagem{
+  position: relative;
+  top: -23px;
+  display: flex;
+  justify-content: center;
+  color: #fff;  
+  text-shadow: #000 1px 0 10px;
+}
+
+/* modal */
+#fade,
+#crit,
+#calculadora-crit,
+#calculadora-ataque {
+  transition: 0,5s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a1a1a160;
+  z-index: 5;
+  display: none;
+}
+
+.modal {
+  z-index: 10;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  max-width: 90%;
+}
+
+.equipamento-modal, .resultadoCrit{
+  width: 80px;
+}
+
+.modal-atk, .modal-atk-e{
+  display: flex;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.itens-modal{
+  background-color: #161616;
+  width: 100%;
+  padding-right: 15%;
+  padding-left: 15%;
+  border-radius: 2rem;
+  padding: 1.2rem;
+}
+
+.modal-atk, .modal-atk-e, .itens-modal, .calc-crit-1, .calc-ataque-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-atk{
+  padding-top: .5rem;
+}
+
+.modal-atk-e{
+  padding-bottom: 2rem;
+}
+
+.text-atk-e, .text-atk, .text-crit, .text-crit-calc, .text-atk-e-calculadora, .text-atk-calculadora{
+  width: 100%;
+  text-align: center;
+}
+
+.img-atk, .img-atk-e{
+  width: 15%;
+}
+
+.equipamento-modal, .resultadoCrit{
+  width: 25%;
+}
+
+.btn-salvar, .btn-cancelar {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: .3rem 0;
+}
+
+.salvar-editar, .cancelar-editar, #json, .ler-label {
+  width: 50%;
+  border: 2px solid #fff;
+  background-color: #161616;
+  color: #fff;
+  padding: 5px;
+  border-radius: 200px;
+}
+
+.backup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#json, .ler-label{
+  width: 20%;
+  margin-bottom: 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cancelar-editar {
+  color: red;
+  border: 2px solid red;
+}
+
+.dados {
+  width: 100%;
+}
+
+img.equip-crit-img {
+  padding-left: 5%;
+  width: 55%;
+}
+
+.icon-crit{
+  width: 30%;
+}
+
+input#ler-JSON {
+  display: none
+}
+
+.ler-label {
+  cursor: pointer;
+}
+
+.grafico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+th, td {
+  border: 2px solid;
+  text-align: center;
+}
+
+.grafico-legenda {
+  position: relative;
+  top: 20%;
+  right: 0px;
+}
+
+@media screen and (max-width: 800px){
+  .eficiencia{
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .equipamento, .equipamento2 {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .itens-modal{
+    width: 85%;
+  }
+  .status{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  #json, .ler-label{
+    width: 40%;
+  }
+
+  .div-calculadora  {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+}
+
+
+.info-grafico{
+  margin-top: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.texto-grafico {
+  display: flex;
+  justify-content: space-between;
+}
+
+img.item-grafico{
+  width: 70px;
+}
+
+.critico-grafico, .ataque-grafico{
+  margin-top: 20px;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+span.porcentagem-grafico {
+  display: flex;
+  align-items: center;
+}
+
+.grafico{
+  background-color: #161616;
+  border-bottom: 1px solid;
+  width: 100%;
+  height: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.barra-grafico{
+  background-color: #63c384;
+  z-index: 10;
+  height: 5px;
+}
+
+.grafico, .barra-grafico{
+  border-radius: 20px;
+}
+
+.calculadora-button{
+  display: none;
+}
+
+.div-calculadora {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+}
+
+.response-calculadora {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.calc-ataque, .calc-critico{
+  width: 40px;
+}
+
+.calc-critico{
+  margin-top: 20px;
+}
+
+.div-calculadora img{
+  width: 60px;
+  opacity: 40%;
+}
+
+.div-calculadora img:hover{
+  opacity: 80%;
+}
+
+.calc-crit-2, .calc-ataque-2 {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  width: 100%;
+}
+
+.ads {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 20%;
+  height: 20px;
+}
