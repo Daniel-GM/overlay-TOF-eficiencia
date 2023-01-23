@@ -101,7 +101,7 @@ function printaTela() {
   } else if (menu == 'menu-JSON') {
     $('.response-JSON').css('display', 'block')
   } else if (menu == 'menu-grafico') {
-    $('.response-grafico').css('display', 'block')
+    $('.response-grafico').css('display', 'flex')
   } else if (menu == 'menu-calculadora') {
     $('.response-calculadora').css('display', 'flex')
   } else if (menu == 'menu-json') {
@@ -278,15 +278,6 @@ function salvaStatus(id) {
   } else {
     equipamentoModal = $('.ataque-calc')[0]['src']
   }
-
-
-  let link = window.location.href
-
-  if (link == 'http://127.0.0.1:3000/index.html') {
-    link = link.replace('index.html', '')
-  }
-  equipamentoModal = equipamentoModal.replace(link + 'img/equipamentos/', '')
-  equipamentoModal = equipamentoModal.replace('.webp', '')
   
   if (equipamentoModal.includes('elmo')) {
     equipamentoModal = 'elmo'
@@ -295,31 +286,36 @@ function salvaStatus(id) {
       setStatus(elmo, elemento, equipamentoModal, id)
     else
       setStatus(peca, elemento, equipamentoModal, id)
-  } else if (equipamentoModal == 'ombreira') {
+  } else if (equipamentoModal.includes('ombreira')) {
+    equipamentoModal = 'ombreira'
     let peca = JSON.parse(localGet('ombreira'))
     if (peca == null)
       setStatus(ombreira, elemento, equipamentoModal, id)
     else
       setStatus(peca, elemento, equipamentoModal, id)
-  } else if (equipamentoModal == 'bracadeira') {
+  } else if (equipamentoModal.includes('bracadeira')) {
+    equipamentoModal = 'bracadeira'
     let peca = JSON.parse(localGet('bracadeira'))
     if (peca == null)
       setStatus(bracadeira, elemento, equipamentoModal, id)
     else
       setStatus(peca, elemento, equipamentoModal, id)
-  } else if (equipamentoModal == 'cinto') {
+  } else if (equipamentoModal.includes('cinto')) {
+    equipamentoModal = 'cinto'
     let peca = JSON.parse(localGet('cinto'))
     if (peca == null)
       setStatus(cinto, elemento, equipamentoModal, id)
     else
       setStatus(peca, elemento, equipamentoModal, id)
-  } else if (equipamentoModal == 'peitoral') {
+  } else if (equipamentoModal.includes('peitoral')) {
+      equipamentoModal = 'peitoral'
     let peca = JSON.parse(localGet('peitoral'))
     if (peca == null)
       setStatus(peitoral, elemento, equipamentoModal, id)
     else
       setStatus(peca, elemento, equipamentoModal, id)
-  } else if (equipamentoModal == 'calca') {
+  } else if (equipamentoModal.includes('calca')) {
+      equipamentoModal = 'calca'
     let peca = JSON.parse(localGet('calca'))
     if (peca == null)
       setStatus(calca, elemento, equipamentoModal, id)
@@ -401,14 +397,16 @@ function salvarCrit(id) {
   equipamentoModal = equipamentoModal.replace(link + 'img/equipamentos/', '')
   equipamentoModal = equipamentoModal.replace('.webp', '')
 
-  if (equipamentoModal == 'bota') {
+  if (equipamentoModal.includes('bota')) {
+    equipamentoModal = 'bota'
     let peca = JSON.parse(localGet('bota'))
     if (peca == null)
       setCrit(bota, elemento, id, equipamentoModal)
     else
       setCrit(peca, elemento, id, equipamentoModal)
   }
-  else if (equipamentoModal == 'luva') {
+  if (equipamentoModal.includes('luva')) {
+    equipamentoModal = 'luva'
     let peca = JSON.parse(localGet('luva'))
     if (peca == null)
       setCrit(luva, elemento, id, equipamentoModal)
@@ -489,7 +487,14 @@ $('.menu-item').click(() => {
 })
 
 function getGrafico(listaAtaque, listaCritico) {
-  let divPAi = $('.response-grafico')[0]['children']
+  let responseSlice = ($('.response-grafico .slice'))  
+  let divPAi = []
+
+  for (let i = 0; i < 4; i++) {
+    divPAi.push(responseSlice[i]['children'][0])
+    divPAi.push(responseSlice[i]['children'][1])
+  }
+  
   listaAtaque.sort((x, y) => {
     return x.ataque - y.ataque
   })
@@ -500,6 +505,7 @@ function getGrafico(listaAtaque, listaCritico) {
 
   for (let i = 0; i < 8; i++) {
     if (i < 6) {
+
       $(divPAi[i]).find('.item-grafico').attr('src', `img/equipamentos/${listaAtaque[i]['item']}.webp`)
 
       $(divPAi[i]).find('span').html(
@@ -558,14 +564,8 @@ function verificaCalculadoraCrit() {
   let elemento = localGet('elemento')
   let equipamento = $('.crit-calc')[0]['src']
 
-  let link = window.location.href
-
-  if (link == 'http://127.0.0.1:3000/index.html') {
-    link = link.replace('index.html', '')
-  }
-
-  equipamento = equipamento.replace(link + 'img/equipamentos/', '')
-  equipamento = equipamento.replace('.webp', '')
+  if (equipamento.includes('bota')) equipamento = 'bota'
+  else if (equipamento.includes('luva')) equipamento = 'luva'
 
   calculadoraResultado(equipamento, elemento)
 }
@@ -625,17 +625,16 @@ function calculaAtaque(id) {
 }
 
 function verificaCalculadoraAtaque() {
+  debugger
   let elemento = localGet('elemento')
   let equipamento = $('.ataque-calc')[0]['src']
 
-  let link = window.location.href
-
-  if (link == 'http://127.0.0.1:3000/index.html') {
-    link = link.replace('index.html', '')
-  }
-
-  equipamento = equipamento.replace(link + 'img/equipamentos/', '')
-  equipamento = equipamento.replace('.webp', '')
+  if (equipamento.includes('elmo')) equipamento = 'elmo'
+  else if (equipamento.includes('ombreira')) equipamento = 'ombreira'
+  else if (equipamento.includes('bracadeira')) equipamento = 'bracadeira'
+  else if (equipamento.includes('cinto')) equipamento = 'cinto'
+  else if (equipamento.includes('peitoral')) equipamento = 'peitoral'
+  else if (equipamento.includes('calca')) equipamento = 'calca'
 
   calculadoraResultadoAtaque(equipamento, elemento)
 }

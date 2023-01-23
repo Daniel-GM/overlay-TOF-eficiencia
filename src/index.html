@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="index.css" />
     <link rel="shortcut icon" href="img/icon/ruby.png" type="image/x-icon">
-    <title>TOF Eficiência - v2.1</title>
+    <title>TOF Eficiência - Alfa</title>
   </head>
 
   <body>
@@ -38,7 +38,7 @@
   
     <section class="linha">
     </section>
-  
+
     <!-- ATAQUE -->
     <div class="response">
       <section class="status-full">
@@ -58,189 +58,193 @@
       </section>
   
       <section class="equips">
-        <div class="equipamento">
-          <div class="div-editar">
-            <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-elmo"
-              onclick="editaEquipamento(this.id)"></input>
-          </div>
-          <div class="dados">
-            <div class="elmo">
-              <img src="img/equipamentos/elmo.webp" class="equip-img">
-              <div class="status">
-                <div class="ataque">
-                  <img src="img/status/atk.webp" class="icon-ataque">
-                  <span class="atk"></span>
-                  <div class="eficiencia"></div>
-                </div>
-                <div class="e-ataque">
-                  <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
-                  <span class="e-atk"></span>
-                </div>
-                <div class="total">
-                  <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
-                  <span class="total-elmo"></span>
+        <div class="slice">
+          <div class="equipamento">
+            <div class="div-editar">
+              <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-elmo"
+                onclick="editaEquipamento(this.id)"></input>
+            </div>
+            <div class="dados">
+              <div class="elmo">
+                <img src="img/equipamentos/elmo.webp" class="equip-img">
+                <div class="status">
+                  <div class="ataque">
+                    <img src="img/status/atk.webp" class="icon-ataque">
+                    <span class="atk"></span>
+                    <div class="eficiencia"></div>
+                  </div>
+                  <div class="e-ataque">
+                    <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
+                    <span class="e-atk"></span>
+                  </div>
+                  <div class="total">
+                    <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
+                    <span class="total-elmo"></span>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="barra barra-elmo">
+              <div class="eficiencia"></div>
+              <div class="porcentagem"></div>
+            </div>
           </div>
-          <div class="barra barra-elmo">
-            <div class="eficiencia"></div>
-            <div class="porcentagem"></div>
+    
+          <div class="equipamento2">
+            <div class="div-editar">
+              <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-ombreira"
+                onclick="editaEquipamento(this.id)"></input>
+            </div>
+            <div class="dados">
+              <div class="ombreira">
+                <img src="img/equipamentos/ombreira.webp" class="equip-img">
+                <div class="status">
+                  <div class="ataque">
+                    <img src="img/status/atk.webp" class="icon-ataque">
+                    <span class="atk"></span>
+                    <div class="eficiencia"></div>
+                  </div>
+                  <div class="e-ataque">
+                    <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
+                    <span class="e-atk"></span>
+                  </div>
+                  <div class="total">
+                    <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
+                    <span class="total-ombreira"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="barra barra-ombreira">
+              <div class="eficiencia"></div>
+              <div class="porcentagem"></div>
+            </div>
           </div>
         </div>
-  
-        <div class="equipamento2">
-          <div class="div-editar">
-            <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-ombreira"
-              onclick="editaEquipamento(this.id)"></input>
-          </div>
-          <div class="dados">
-            <div class="ombreira">
-              <img src="img/equipamentos/ombreira.webp" class="equip-img">
-              <div class="status">
-                <div class="ataque">
-                  <img src="img/status/atk.webp" class="icon-ataque">
-                  <span class="atk"></span>
-                  <div class="eficiencia"></div>
-                </div>
-                <div class="e-ataque">
-                  <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
-                  <span class="e-atk"></span>
-                </div>
-                <div class="total">
-                  <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
-                  <span class="total-ombreira"></span>
+        <div class="slice">
+          <div class="equipamento">
+            <div class="div-editar">
+              <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-bracadeira"
+                onclick="editaEquipamento(this.id)"></input>
+            </div>
+            <div class="dados">
+              <div class="bracadeira">
+                <img src="img/equipamentos/bracadeira.webp" class="equip-img">
+                <div class="status">
+                  <div class="ataque">
+                    <img src="img/status/atk.webp" class="icon-ataque">
+                    <span class="atk"></span>
+                    <div class="eficiencia"></div>
+                  </div>
+                  <div class="e-ataque">
+                    <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
+                    <span class="e-atk"></span>
+                  </div>
+                  <div class="total">
+                    <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
+                    <span class="total-bracadeira"></span>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="barra barra-bracadeira">
+              <div class="eficiencia"></div>
+              <div class="porcentagem"></div>
+            </div>
           </div>
-          <div class="barra barra-ombreira">
-            <div class="eficiencia"></div>
-            <div class="porcentagem"></div>
+    
+          <div class="equipamento2">
+            <div class="div-editar">
+              <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-cinto"
+                onclick="editaEquipamento(this.id)"></input>
+            </div>
+            <div class="dados">
+              <div class="cinto">
+                <img src="img/equipamentos/cinto.webp" class="equip-img">
+                <div class="status">
+                  <div class="ataque">
+                    <img src="img/status/atk.webp" class="icon-ataque">
+                    <span class="atk"></span>
+                    <div class="eficiencia"></div>
+                  </div>
+                  <div class="e-ataque">
+                    <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
+                    <span class="e-atk"></span>
+                  </div>
+                  <div class="total">
+                    <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
+                    <span class="total-cinto"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="barra barra-cinto">
+              <div class="eficiencia"></div>
+              <div class="porcentagem"></div>
+            </div>
           </div>
         </div>
-  
-        <div class="equipamento">
-          <div class="div-editar">
-            <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-bracadeira"
-              onclick="editaEquipamento(this.id)"></input>
-          </div>
-          <div class="dados">
-            <div class="bracadeira">
-              <img src="img/equipamentos/bracadeira.webp" class="equip-img">
-              <div class="status">
-                <div class="ataque">
-                  <img src="img/status/atk.webp" class="icon-ataque">
-                  <span class="atk"></span>
-                  <div class="eficiencia"></div>
-                </div>
-                <div class="e-ataque">
-                  <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
-                  <span class="e-atk"></span>
-                </div>
-                <div class="total">
-                  <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
-                  <span class="total-bracadeira"></span>
+        <div class="slice">
+          <div class="equipamento">
+            <div class="div-editar">
+              <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-peitoral"
+                onclick="editaEquipamento(this.id)"></input>
+            </div>
+            <div class="dados">
+              <div class="peitoral">
+                <img src="img/equipamentos/peitoral.webp" class="equip-img">
+                <div class="status">
+                  <div class="ataque">
+                    <img src="img/status/atk.webp" class="icon-ataque">
+                    <span class="atk"></span>
+                    <div class="eficiencia"></div>
+                  </div>
+                  <div class="e-ataque">
+                    <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
+                    <span class="e-atk"></span>
+                  </div>
+                  <div class="total">
+                    <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
+                    <span class="total-peitoral"></span>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="barra barra-peitoral">
+              <div class="eficiencia"></div>
+              <div class="porcentagem"></div>
+            </div>
           </div>
-          <div class="barra barra-bracadeira">
-            <div class="eficiencia"></div>
-            <div class="porcentagem"></div>
-          </div>
-        </div>
-  
-        <div class="equipamento2">
-          <div class="div-editar">
-            <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-cinto"
-              onclick="editaEquipamento(this.id)"></input>
-          </div>
-          <div class="dados">
-            <div class="cinto">
-              <img src="img/equipamentos/cinto.webp" class="equip-img">
-              <div class="status">
-                <div class="ataque">
-                  <img src="img/status/atk.webp" class="icon-ataque">
-                  <span class="atk"></span>
-                  <div class="eficiencia"></div>
-                </div>
-                <div class="e-ataque">
-                  <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
-                  <span class="e-atk"></span>
-                </div>
-                <div class="total">
-                  <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
-                  <span class="total-cinto"></span>
+    
+          <div class="equipamento2">
+            <div class="div-editar">
+              <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-calca"
+                onclick="editaEquipamento(this.id)"></input>
+            </div>
+            <div class="dados">
+              <div class="calca">
+                <img src="img/equipamentos/calca.webp" class="equip-img">
+                <div class="status">
+                  <div class="ataque">
+                    <img src="img/status/atk.webp" class="icon-ataque">
+                    <span class="atk"></span>
+                    <div class="eficiencia"></div>
+                  </div>
+                  <div class="e-ataque">
+                    <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
+                    <span class="e-atk"></span>
+                  </div>
+                  <div class="total">
+                    <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
+                    <span class="total-calca"></span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="barra barra-cinto">
-            <div class="eficiencia"></div>
-            <div class="porcentagem"></div>
-          </div>
-        </div>
-  
-        <div class="equipamento">
-          <div class="div-editar">
-            <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-peitoral"
-              onclick="editaEquipamento(this.id)"></input>
-          </div>
-          <div class="dados">
-            <div class="peitoral">
-              <img src="img/equipamentos/peitoral.webp" class="equip-img">
-              <div class="status">
-                <div class="ataque">
-                  <img src="img/status/atk.webp" class="icon-ataque">
-                  <span class="atk"></span>
-                  <div class="eficiencia"></div>
-                </div>
-                <div class="e-ataque">
-                  <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
-                  <span class="e-atk"></span>
-                </div>
-                <div class="total">
-                  <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
-                  <span class="total-peitoral"></span>
-                </div>
-              </div>
+            <div class="barra barra-calca">
+              <div class="eficiencia"></div>
+              <div class="porcentagem"></div>
             </div>
-          </div>
-          <div class="barra barra-peitoral">
-            <div class="eficiencia"></div>
-            <div class="porcentagem"></div>
-          </div>
-        </div>
-  
-        <div class="equipamento2">
-          <div class="div-editar">
-            <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-calca"
-              onclick="editaEquipamento(this.id)"></input>
-          </div>
-          <div class="dados">
-            <div class="calca">
-              <img src="img/equipamentos/calca.webp" class="equip-img">
-              <div class="status">
-                <div class="ataque">
-                  <img src="img/status/atk.webp" class="icon-ataque">
-                  <span class="atk"></span>
-                  <div class="eficiencia"></div>
-                </div>
-                <div class="e-ataque">
-                  <img src="img/status/ThunderAtk.webp" class="icon-e-ataque">
-                  <span class="e-atk"></span>
-                </div>
-                <div class="total">
-                  <img src="img/icon/add_task_white_24dp.svg" class="icon-total">
-                  <span class="total-calca"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="barra barra-calca">
-            <div class="eficiencia"></div>
-            <div class="porcentagem"></div>
           </div>
         </div>
       </section>
@@ -294,47 +298,49 @@
       </section>
   
       <section class="equips">
-        <div class="equipamento">
-          <div class="div-editar">
-            <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-bota"
-              onclick="editaCritico(this.id)"></input>
-          </div>
-          <div class="dados">
-            <div class="bota">
-              <img src="img/equipamentos/bota.webp" class="equip-crit-img equip-img">
-              <div class="status">
-                <div class="crit">
-                  <img src="img/status/critico.webp" class="icon-crit">
-                  <span class="critico"></span>
+        <div class="slice">
+          <div class="equipamento">
+            <div class="div-editar">
+              <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-bota"
+                onclick="editaCritico(this.id)"></input>
+            </div>
+            <div class="dados">
+              <div class="bota">
+                <img src="img/equipamentos/bota.webp" class="equip-crit-img equip-img">
+                <div class="status">
+                  <div class="crit">
+                    <img src="img/status/critico.webp" class="icon-crit">
+                    <span class="critico"></span>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="barra barra-bota">
+              <div class="eficiencia"></div>
+              <div class="porcentagem"></div>
+            </div>
           </div>
-          <div class="barra barra-bota">
-            <div class="eficiencia"></div>
-            <div class="porcentagem"></div>
-          </div>
-        </div>
-  
-        <div class="equipamento2">
-          <div class="div-editar">
-            <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-luva"
-              onclick="editaCritico(this.id)"></input>
-          </div>
-          <div class="dados">
-            <div class="luva">
-              <img src="img/equipamentos/luva.webp" class="equip-crit-img equip-img">
-              <div class="status">
-                <div class="crit">
-                  <img src="img/status/critico.webp" class="icon-crit">
-                  <span class="critico"></span>
+    
+          <div class="equipamento2">
+            <div class="div-editar">
+              <input type="image" src="img/icon/edit_black_24dp.svg" class="editar" id="editar-luva"
+                onclick="editaCritico(this.id)"></input>
+            </div>
+            <div class="dados">
+              <div class="luva">
+                <img src="img/equipamentos/luva.webp" class="equip-crit-img equip-img">
+                <div class="status">
+                  <div class="crit">
+                    <img src="img/status/critico.webp" class="icon-crit">
+                    <span class="critico"></span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="barra barra-luva">
-            <div class="eficiencia"></div>
-            <div class="porcentagem"></div>
+            <div class="barra barra-luva">
+              <div class="eficiencia"></div>
+              <div class="porcentagem"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -377,85 +383,90 @@
   
     <!-- GRAFICO -->
     <div class="response-grafico">
-      <div class="info-grafico">
-        <img src="img/status/atk.webp" alt="" class="ataque-grafico">
-        <div class="texto-grafico">
-          <img class="item-grafico">
-          <span class="porcentagem-grafico"></span>
+      <img src="img/status/atk.webp" alt="" class="ataque-grafico">
+      <div class="slice">
+        <div class="info-grafico">
+          <div class="texto-grafico">
+            <img class="item-grafico">
+            <span class="porcentagem-grafico"></span>
+          </div>
+          <div class="grafico">
+            <div class="barra-grafico"></div>
+          </div>
         </div>
-        <div class="grafico">
-          <div class="barra-grafico"></div>
-        </div>
-      </div>
-  
-      <div class="info-grafico">
-        <div class="texto-grafico">
-          <img class="item-grafico">
-          <span class="porcentagem-grafico"></span>
-        </div>
-        <div class="grafico">
-          <div class="barra-grafico"></div>
-        </div>
-      </div>
-  
-      <div class="info-grafico">
-        <div class="texto-grafico">
-          <img class="item-grafico">
-          <span class="porcentagem-grafico"></span>
-        </div>
-        <div class="grafico">
-          <div class="barra-grafico"></div>
+      
+        <div class="info-grafico">
+          <div class="texto-grafico">
+            <img class="item-grafico">
+            <span class="porcentagem-grafico"></span>
+          </div>
+          <div class="grafico">
+            <div class="barra-grafico"></div>
+          </div>
         </div>
       </div>
-  
-      <div class="info-grafico">
-        <div class="texto-grafico">
-          <img class="item-grafico">
-          <span class="porcentagem-grafico"></span>
+      <div class="slice">
+        <div class="info-grafico">
+          <div class="texto-grafico">
+            <img class="item-grafico">
+            <span class="porcentagem-grafico"></span>
+          </div>
+          <div class="grafico">
+            <div class="barra-grafico"></div>
+          </div>
         </div>
-        <div class="grafico">
-          <div class="barra-grafico"></div>
-        </div>
-      </div>
-  
-      <div class="info-grafico">
-        <div class="texto-grafico">
-          <img class="item-grafico">
-          <span class="porcentagem-grafico"></span>
-        </div>
-        <div class="grafico">
-          <div class="barra-grafico"></div>
-        </div>
-      </div>
-  
-      <div class="info-grafico">
-        <div class="texto-grafico">
-          <img class="item-grafico">
-          <span class="porcentagem-grafico"></span>
-        </div>
-        <div class="grafico">
-          <div class="barra-grafico"></div>
+    
+        <div class="info-grafico">
+          <div class="texto-grafico">
+            <img class="item-grafico">
+            <span class="porcentagem-grafico"></span>
+          </div>
+          <div class="grafico">
+            <div class="barra-grafico"></div>
+          </div>
         </div>
       </div>
-  
-      <div class="info-grafico">
-        <img src="img/status/critico.webp" alt="" class="critico-grafico">
-        <div class="texto-grafico">
-          <img class="item-grafico">
-          <span class="porcentagem-grafico"></span>
+      <div class="slice">
+        <div class="info-grafico">
+          <div class="texto-grafico">
+            <img class="item-grafico">
+            <span class="porcentagem-grafico"></span>
+          </div>
+          <div class="grafico">
+            <div class="barra-grafico"></div>
+          </div>
         </div>
-        <div class="grafico">
-          <div class="barra-grafico"></div>
+    
+        <div class="info-grafico">
+          <div class="texto-grafico">
+            <img class="item-grafico">
+            <span class="porcentagem-grafico"></span>
+          </div>
+          <div class="grafico">
+            <div class="barra-grafico"></div>
+          </div>
         </div>
       </div>
-  
-      <div class="info-grafico">
-        <div class="texto-grafico">
-          <img class="item-grafico">
-          <span class="porcentagem-grafico"></span>
+      <img src="img/status/critico.webp" alt="" class="critico-grafico">
+      <div class="slice">
+        <div class="info-grafico">
+          <div class="texto-grafico">
+            <img class="item-grafico">
+            <span class="porcentagem-grafico"></span>
+          </div>
+          <div class="grafico">
+            <div class="barra-grafico"></div>
+          </div>
         </div>
-        <div class="grafico">
-          <div class="barra-grafico"></div>
+    
+        <div class="info-grafico">
+          <div class="texto-grafico">
+            <img class="item-grafico">
+            <span class="porcentagem-grafico"></span>
+          </div>
+          <div class="grafico">
+            <div class="barra-grafico"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -575,24 +586,7 @@
         </div>
       </div>
     </section>
-  
-    <div class="ads">
-      <div class="fundo-ads">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1545257194206629"
-       crossorigin="anonymous"></script>
-        <!-- bloco-1 -->
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-1545257194206629"
-            data-ad-slot="5395297910"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-    </div>
-  
+
     <script src="https://use.fontawesome.com/62e43a72a9.js"></script>
     <script src="js/script.js"></script>
   </body>
